@@ -1,0 +1,195 @@
+@import "colors";
+
+@mixin title {
+  font-size: 41px;
+  line-height: 57px;
+  font-weight: 700;
+  color: $color-service;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-content: center;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin button {
+  cursor: pointer;
+  color: $color-service--lightest;
+  background-color: $color-main;
+  max-width: 200px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 16px 22px;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($color-main, 5);
+    transition: 0.3s ease;
+  }
+
+  &:active {
+    color: $color-service--light;
+    transition: 0.3s ease;
+  }
+
+  &[disabled] {
+    background-color: $color-service--light;
+    color: $color-service--lighten;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 13px 31px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    padding: 13px 25px;
+    min-width: 205px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    min-width: 243px;
+    padding: 14px 35px;
+  }
+}
+
+@mixin button-outline {
+  @include button;
+  background-color: $color-service--lightest;
+  color: $color-service;
+
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    color: $color-background;
+    background-color: $color-main;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    max-width: 234px;
+    min-width: auto;
+    padding: 14px 35px;
+  }
+}
+
+@mixin tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+
+  min-height: 93px;
+
+  background-color: $color-background;
+  color: $color-service--light;
+  border: none;
+  text-transform: none;
+  opacity: 0.9;
+
+  &--active,
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    opacity: 1;
+    color: $color-service;
+    background-color: $color-service--lightest;
+    transition: 0.3s ease;
+  }
+}
+
+@mixin mandatory {
+  position: absolute;
+  content: '*';
+  left: 10px;
+  top: 10px;
+  z-index: 60;
+
+  width: 12px;
+  height: 12px;
+  color: $color-main;
+}
+
+@mixin error-message {
+  position: absolute;
+  left: 0;
+  top: -19px;
+  z-index: 60;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  color: $color-main;
+}
+
+@mixin input-field {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  color: black;
+  background-color: transparent;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+
+  width: 100%;
+  padding: 17px;
+  border: 1px $color-service solid;
+
+  &:focus,
+  &:hover {
+    border-color: $color-main--dark;
+  }
+}
+
+@mixin label {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $color-service--light;
+  display: block;
+  padding-bottom: 8px;
+}
+
+@mixin desc {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  color: $color-service--light;
+  display: block;
+  padding-top: 8px;
+}

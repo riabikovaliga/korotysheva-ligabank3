@@ -1,0 +1,54 @@
+@import "../../scss/mixins";
+
+.map {
+  position: relative;
+  min-width: 320px;
+  margin: 25px auto 45px;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    padding: 0 45px;
+    margin-bottom: 75px;
+    margin-top: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+    max-width: 1366px;
+    padding: 0 98px;
+    margin: 0 auto 102px;
+  }
+}
+
+.map__iframe {
+  background-image: url('map.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 381px;
+
+  @media (min-width: $tablet-width) {
+    height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 462px;
+  }
+}
+
+.map__title {
+  @include title;
+  margin-bottom: 60px;
+
+  @media (max-width: $tablet-width-only) {
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 15px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}

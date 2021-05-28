@@ -1,0 +1,6 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.button {
+  @include button;
+}

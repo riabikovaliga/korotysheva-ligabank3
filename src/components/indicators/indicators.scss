@@ -1,0 +1,23 @@
+.indicators {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  list-style: none;
+  bottom: 5%;
+  left: calc(50% - 24px);
+}
+
+.indicator {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  z-index: 30;
+  background-color: $color-main--dark;
+  border: 1px $color-main--dark solid;
+  margin: 4px;
+
+  &--active {
+    background-color: $color-service--lightest;
+    border: 1px $color-service--lighten solid;
+  }
+}

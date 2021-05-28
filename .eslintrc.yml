@@ -1,0 +1,27 @@
+env:
+  es6: true
+  browser: true
+  commonjs: true
+  jest: true
+
+extends:
+  - 'eslint:recommended'
+  - 'plugin:react/recommended'
+
+rules:
+  semi: error
+  quotes: [2, "single", { "avoidEscape": true }]
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 9
+  sourceType: module
+
+plugins:
+  - 'react'
+
+settings:
+  react:
+    version: '16'
+

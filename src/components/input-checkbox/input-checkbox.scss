@@ -1,0 +1,43 @@
+.input-checkbox {
+  @include label;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.input-checkbox input {
+  display: none;
+}
+
+.input-checkbox span:before {
+  content: '';
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  border: 1px solid $color-service--light;
+  background-color: transparent;
+  padding: 3px;
+  top: 0;
+  left: 0;
+}
+
+.input-checkbox input:checked + span:after {
+  content: '\2304';
+  position: absolute;
+  top: -7px;
+  left: 3px;
+  font-size: 16px;
+  color: $color-service--lightest;
+}
+
+.input-checkbox input:checked + span:before {
+  border: 1px solid $color-main;
+  background-color: $color-main;
+}

@@ -1,0 +1,32 @@
+@import "../../scss/colors";
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &--error .input__text {
+    border-color: $color-error;
+  }
+
+  &--error .input__desc {
+   color: $color-error;
+  }
+}
+
+.input__label {
+  @include label;
+}
+
+.input__desc {
+  @include desc;
+}
+
+.input__text {
+  @include input-field;
+}
+
+.input:hover .input__text,
+.input:focus .input__text {
+  border-color: $color-main;
+}

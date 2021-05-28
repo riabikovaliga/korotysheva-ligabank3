@@ -1,0 +1,78 @@
+@import "colors";
+@import "const-width";
+
+body {
+  min-width: 320px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: $color-service;
+  background-color: $color-background;
+
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+main,
+article,
+section {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Roboto", "Arial", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  padding: 0 15px;
+  position: relative;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 98px;
+    min-width: $desktop-width;
+    max-width: 1366px;
+  }
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.text-decoration {
+  text-decoration: underline;
+  font-weight: 500;
+}

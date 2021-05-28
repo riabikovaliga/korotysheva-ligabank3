@@ -1,0 +1,159 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.preview {
+  background: $color-service--lightest;
+  width: 100%;
+
+  &--light {
+    background: $color-main;
+  }
+
+  &--main {
+    background: linear-gradient(to bottom, $color-main 32%, $color-main--dark 99.79%);
+  }
+
+  &--man {
+    background: linear-gradient(135deg, #d9dee8, #f6fbff);
+  }
+
+  &--woman {
+    background: #e5f1fd;
+  }
+}
+
+.preview__wrapper {
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  min-height: 226px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 400px;
+    max-width: 1366px;
+    min-width: $desktop-width;
+  }
+}
+
+.preview__button {
+  @include button;
+
+  &--light {
+    @include button-outline;
+  }
+}
+
+.preview__title {
+  @include title;
+  font-size: 38px;
+  line-height: 44px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 46px;
+    line-height: 53px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 64px;
+    margin-bottom: 34px;
+  }
+
+    &--light {
+    color: $color-service--lightest;
+  }
+}
+
+.preview__subtitle {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  padding-top: 10px;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 210px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 25px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+  }
+}
+
+.preview__left {
+  position: relative;
+  z-index: 15;
+  margin-left: 15px;
+  padding-top: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 86px;
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 270px;
+    padding-top: 100px;
+  }
+}
+
+.preview__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  z-index: 1;
+  right: 0;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    right: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+  }
+}
+
+.preview__img {
+  height: 100%;
+  object-fit: cover;
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.preview--light .preview__img {
+  @media (max-width: $mobile-width-only) {
+    object-position: 41% -52px;
+    height: 290px;
+  }
+}
+
+.preview--man .preview__img {
+  @media (max-width: $mobile-width-only) {
+    object-position: 62% 0;
+    height: 250px;
+  }
+}
+
+.preview--woman .preview__img {
+  @media (max-width: $mobile-width-only) {
+    object-position: 62% 0;
+    height: 250px;
+  }
+}

@@ -1,0 +1,19 @@
+.calculator-select {
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 25px;
+  }
+}
+
+.calculator-select__subtitle {
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
+}

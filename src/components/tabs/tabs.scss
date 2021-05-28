@@ -1,0 +1,44 @@
+@import "../../scss/const-width";
+@import "../../scss/colors";
+
+.tabs {
+  margin-bottom: 62px;
+
+  position: relative;
+  min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 98px;
+    max-width: 1366px;
+    min-width: $desktop-width;
+    margin: 0 auto 90px;
+  }
+}
+
+.tabs__content {
+  background-color: $color-service--lightest;
+}
+
+.tabs__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.tabs__indicators {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.tabs__btn {
+  max-width: 293px;
+}

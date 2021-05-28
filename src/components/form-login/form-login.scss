@@ -1,0 +1,75 @@
+.form-login {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  border: 4px $color-main solid;
+  background-color: $color-service--lightest;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    min-height: 493px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 544px;
+    min-height: 493px;
+  }
+}
+
+.form-login__input {
+  margin-top: 30px;
+  position: relative;
+}
+
+.form-login__logo {
+  padding-left: 0;
+}
+
+.form-login__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-login__submit {
+  min-width: 100%;
+  margin-top: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    order: 5;
+  }
+}
+
+.form-login__link {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $color-service--light;
+  text-decoration: none;
+  text-align: right;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 10px;
+    align-self: center;
+    order: 10;
+  }
+}
+
+.form-login__input-wrapper {
+  position: relative;
+}
+
+.input__password-img {
+  position: absolute;
+  top: 90px;
+  right: 5%;
+  z-index: 20;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}

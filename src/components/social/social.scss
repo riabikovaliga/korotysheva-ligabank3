@@ -1,0 +1,78 @@
+@import "../../scss/colors";
+
+.social {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-around;
+  }
+}
+
+.social__item {
+  height: 26px;
+  cursor: pointer;
+  width: 33px;
+  margin-left: 0;
+  padding: 5px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0 0 13px;
+    width: 31px;
+    margin-left: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 0 0 10px;
+    width: 26px;
+  }
+}
+
+.social__link {
+  position: relative;
+  color: $color-service;
+
+  &--twitter .social__link-icon {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--facebook .social__link-icon {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--instagram .social__link-icon {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--youtube .social__link-icon {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}

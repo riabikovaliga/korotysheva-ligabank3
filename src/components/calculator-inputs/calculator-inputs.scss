@@ -1,0 +1,23 @@
+.calculator-inputs__price,
+.calculator-inputs__range {
+  margin-bottom: 9.5px;
+
+@media (min-width: $tablet-width) {
+    margin-bottom: 14.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+.calculator-inputs__parameter {
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 19px;
+  }
+}
